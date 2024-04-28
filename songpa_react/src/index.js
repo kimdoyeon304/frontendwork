@@ -45,7 +45,8 @@ import './index.css';
 // import reportWebVitals from './reportWebVitals';
 
 //import App from './Songparouter';
-import App from './Ex3';
+//import App from './Ex3';
+import App from './Study2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
