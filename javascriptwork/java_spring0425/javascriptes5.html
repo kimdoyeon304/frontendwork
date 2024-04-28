@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ES5 예제</title>
+
+</head>
+
+
+<body>
+    <script>
+
+        var varvalue = 'print';
+
+
+        console.log(varvalue);
+
+        x = 3.14; //  var 없이 
+
+        console.log(x);
+
+    </script>
+
+    <p>1. 선언되지 않은 변수를 사용하는 예제입니다.</p>
+
+
+
+    <!-- 2. String[number] access -->
+
+    <script>
+
+        var str = "Hello";
+
+        console.log(str[0]); // "H"
+        var strmax=str.length;
+        console.log('길이는'+strmax);
+
+        for(var i=0; i<str.length; i++){
+            console.log(str[i]);
+        }
+        
+        // console.log('============');
+
+        // str.forEach(element => {
+        //     console.log('출력: '+element);            
+        // });
+
+        // for (let i of str) {
+        //     console.log(i);
+        // }
+
+
+
+    </script>
+
+    <p>2. String[number] access: 문자열에 대괄호([])를 사용하여 특정 위치의 문자에 접근하는 예제입니다.</p>
+
+
+    <!-- 3. Multiline strings -->
+
+    <script>
+
+        var multiLineString = "This is a\nmultiline\nstring.";
+
+        console.log(multiLineString);
+
+    </script>
+
+    <p>3. Multiline strings: 여러 줄에 걸친 문자열을 작성하는 예제입니다.</p>
+
+
+    <!-- 4. String.trim() -->
+
+    <script>
+
+
+        //공백제거
+        var str = "  Hello  ";
+
+        console.log(str.trim()); // "Hello"
+
+        var str2 = str.trim();
+
+        console.log('원래 길이:' + str.length);
+
+        console.log('트림한 길이:' + str2.length);
+
+
+    </script>
+
+    <p>4. String.trim(): 문자열의 양쪽 끝에서 공백을 제거하는 예제입니다.</p>
+
+
+    <!-- 5. Array.isArray() -->
+
+    <script>
+
+        var arr = [1, 2, 3];
+
+        var str="1234";
+        console.log(Array.isArray(arr)); // true
+        console.log('============');
+        console.log(Array.isArray(str));//false
+    </script>
+
+    <p>5. Array.isArray(): 주어진 값이 배열인지 여부를 확인하는 예제입니다.</p>
+
+
+    <!-- 6. Array forEach() -->
+
+    <script>
+
+        var arr = [1, 2, 3];
+
+        arr.forEach(function (item) {
+
+            console.log(item);
+
+        });
+
+    </script>
+
+    <p>6. Array forEach(): 배열의 각 요소에 대해 주어진 함수를 실행하는 예제입니다.</p>
+
+
+    <!-- 7. Array map() -->
+
+    <script>
+
+        var arr = [1, 2, 3];
+        //es5                es6 (item) => {}
+        var newArr = arr.map(function (item) {
+
+            return item * 2;
+
+        });
+
+        console.log('map:'+newArr); // [2, 4, 6]
+
+    </script>
+
+    <p>7. Array map(): 배열의 각 요소에 대해 주어진 함수를 호출한 결과로 새로운 배열을 생성하는 예제입니다.</p>
+
+
+    <!-- 8. Array filter() 조건에맞는값만 새로운배열로 만든다 -->
+
+    <script>
+
+        var arr = [1, 2, 3, 4, 5];
+
+        var newArr = arr.filter(function (item) {
+
+            return item % 2 == 0;
+
+        });
+
+        console.log('새로운배열:' + newArr); // [2, 4]
+
+    </script>
+
+    <p>8. Array filter(): 배열의 요소 중 주어진 조건을 만족하는 요소로만 이루어진 새로운 배열을 생성하는 예제입니다.</p>
+
+
+    <!-- 9. Array reduce() -->
+
+    <script>
+
+        var arr = [1, 2, 3, 4];
+
+        var sum = arr.reduce(function (acc, curr) {
+
+            return acc + curr;
+
+        }, 0);
+
+        console.log('reduce:' + sum); // 10
+
+    </script>
+
+    <p>9. Array reduce(): 배열의 각 요소를 하나의 값으로 합하여 반환하는 예제입니다.</p>
+
+
+    <!-- 10. Array reduceRight() -->
+
+    <script>
+
+        var arr = ["a", "b", "c"];
+
+        var concat = arr.reduceRight(function (acc, curr) {
+
+            return acc + curr;
+
+        }, "");
+
+        console.log('reduceRight:' + concat); // "cba"
+
+    </script>
+
+    <p>10. Array reduceRight(): 배열의 각 요소를 오른쪽에서 왼쪽으로 축소하여 반환하는 예제입니다.</p>
+
+
+    <!-- 11. Array every() -->
+
+    <script>
+
+        var arr = [2, 4, 6];
+
+        var allEven = arr.every(function (item) {
+
+            return item % 2 === 0;
+
+        });
+
+        console.log('조건검사:' + allEven); // true
+
+    </script>
+
+    <p>11. Array every(): 배열의 모든 요소가 주어진 조건을 만족하는지 여부를 판별하는 예제입니다.</p>
+
+
+    <!-- 12. Array some() -->
+
+    <script>
+
+        var arr = [2, 3, 5];
+
+        var hasEven = arr.some(function (item) {
+
+            return item % 2 === 0;
+
+        });
+
+        console.log('some:'+hasEven); // true
+
+    </script>
+
+    <p>12. Array some(): 배열의 요소 중 하나라도 주어진 조건을 만족하는지 여부를 판별하는 예제입니다.</p>
+
+
+    <!-- 13. Array indexOf() -->
+
+    <script>
+
+        var arr = [1, 2, 3, 4, 5];
+
+        var index = arr.indexOf(3);
+
+        console.log(index); // 2
+
+    </script>
+
+    <p>13. Array indexOf(): 배열에서 지정된 요소의 첫 번째 인덱스를 반환하는 예제입니다.</p>
+
+
+    <!-- 14. Array lastIndexOf() -->
+
+    <script>
+
+        var arr = [1, 2, 3, 4, 5];
+
+        var lastIndex = arr.lastIndexOf(1);
+
+        console.log('마지막인덱스:' + lastIndex); // 4
+
+    </script>
+
+    <p>14. Array lastIndexOf(): 배열에서 지정된 요소의 마지막 인덱스를 반환 뒤에서부터 검색 하는 예제입니다.</p>
+
+
+    <!-- 15. JSON.parse() -->
+
+    <script>
+
+        var jsonString = '{"name": "John", "age": 30}';
+
+        var jsonObject = JSON.parse(jsonString);
+
+        console.log('json:' + jsonObject.name); // John
+        console.log('json:' + jsonObject.age);
+    </script>
+
+    <p>15. JSON.parse(): JSON 형식의 문자열을 JavaScript 객체로 변환하는 예제입니다.</p>
+
+
+    <!-- 16. JSON.stringify() -->
+
+    <script>
+
+        var obj = { name: "John", age: 30 };
+
+        var jsonString = JSON.stringify(obj);
+
+        console.log(jsonString); // {"name":"John","age":30}
+
+    </script>
+
+    <p>16. JSON.stringify(): JavaScript 객체를 JSON 형식의 문자열로 변환하는 예제입니다.</p>
+
+
+    <!-- 17. Date.now() -->
+
+    <script>
+
+        var timestamp = Date.now();
+
+        console.log(timestamp); // 현재 시간의 타임스탬프
+
+    </script>
+
+    <p>17. Date.now(): 현재 시간의 타임스탬프를 반환하는 예제입니다.</p>
+
+
+    <!-- 18. Date toISOString() -->
+
+    <script>
+
+        var date = new Date();
+
+        var isoString = date.toISOString(); //ISO 형식의 문자열로 반환
+
+
+        // "YYYY-MM-DDTHH:mm:ss.sssZ"
+
+
+
+        // YYYY: 연도를 나타내는 네 자리 숫자
+
+        // MM: 월을 나타내는 두 자리 숫자 (01부터 12까지)
+
+        // DD: 일을 나타내는 두 자리 숫자 (01부터 31까지)
+
+        // T: 날짜와 시간을 구분하는 문자
+
+        // HH: 시간(24시간제)을 나타내는 두 자리 숫자 (00부터 23까지)
+
+        // mm: 분을 나타내는 두 자리 숫자 (00부터 59까지)
+
+        // ss: 초를 나타내는 두 자리 숫자 (00부터 59까지)
+
+        // sss: 밀리초를 나타내는 세 자리 숫자
+
+        // Z: UTC(협정 세계시)를 나타내는 문자열 ("Z" 또는 "+00:00"과 같이)
+
+
+
+
+
+        console.log(isoString); // 현재 날짜와 시간의 ISO 형식 문자열
+
+    </script>
+
+    <p>18. Date toISOString(): Date 객체의 날짜를 ISO 형식의 문자열로 반환하는 예제입니다.</p>
+
+
+    <!-- 19. Date toJSON() -->
+
+    <script>
+
+        var date = new Date();
+
+        var jsonDate = date.toJSON();
+
+        console.log('jsonDate:' + jsonDate); // 현재 날짜와 시간의 JSON 형식 문자열
+
+    </script>
+
+    <p>19. Date toJSON(): Date 객체의 날짜를 JSON 형식의 문자열로 반환하는 예제입니다.</p>
+
+
+    <!-- 20. Property getters and setters -->
+
+    <script>
+
+        var obj = {
+
+            _name: "John",
+            _address: "인천",
+
+            get name() {
+
+                return this._name;
+
+            },
+
+            set name(value) {
+
+                this._name = value;
+
+            }
+
+        };
+
+
+        console.log(obj.name); // "John"
+        console.log(obj._address);
+        obj.name = "Alice";
+        obj._address = "집";
+
+        console.log(obj.name); // "Alice"
+        console.log(obj._address);
+    </script>
+
+    <p>20. Property getters and setters: 객체의 프로퍼티에 getter와 setter를 정의하여 값을 가져오거나 설정하는 예제입니다.</p>
+
+
+    <!-- 21. Reserved words as property names -->
+
+    <script>
+
+        var obj = {
+
+            "function": "hello",
+
+            "for": "world",
+
+            "home": "호주"
+
+        };
+
+
+        console.log(obj["function"]); // "hello"
+
+        console.log(obj["for"]); // "world"
+        console.log(obj["home"]);
+
+    </script>
+
+    <p>21. Reserved words as property names: 객체의 프로퍼티 이름으로 예약어를 사용하는 예제입니다.</p>
+
+
+    <!-- 22. Object methods -->
+
+    <script>
+
+        var obj = {
+
+            name: "John",
+
+            age: 30,
+
+            greet: function () {
+
+                return "Hello, my name is " + this.name + " and I am " + this.age + " years old.";
+
+            }
+
+        };
+
+
+        console.log(obj.greet()); // "Hello, my name is John and I am 30 years old."
+
+    </script>
+
+    <p>22. Object methods: 객체에 메서드를 추가하여 객체의 동작을 정의하는 예제입니다.</p>
+
+
+    <!-- 23. Object defineProperty() -->
+
+    <script>
+
+        var obj = {};
+
+
+        Object.defineProperty(obj, 'name', {
+
+            value: 'John',
+
+            writable: true // name 프로퍼티는 변경할 수 없음
+
+        });
+
+
+        console.log('obj.name:' + obj.name); // "John"
+
+        obj.name = 'Alice'; // 에러: Cannot assign to read only property 'name' of object
+
+        console.log('obj.name:' + obj.name);
+
+    </script>
+
+    <p>23. Object defineProperty(): 객체에 새로운 프로퍼티를 정의하고 속성을 설정하는 예제입니다.</p>
+
+
+    <!-- 24. Function bind() -->
+
+    <script>
+
+        var obj = {
+
+            name: "John",
+
+            greet: function () {
+
+                return "Hello, my name is " + this.name;
+
+            }
+
+        };
+
+
+        var greetFunc = obj.greet.bind(obj);
+
+        console.log(greetFunc()); // "Hello, my name is John"
+
+    </script>
+
+    <p>24. Function bind(): 함수를 호출할 때 this 값을 특정 객체에 바인딩하여 사용하는 예제입니다.</p>
+
+
+  
+
+    <script>
+
+        var obj1 = {
+
+            name: "John",
+
+            greet: function () {
+
+                return "Hello, my name is " + this.name;
+
+            }
+
+        };
+
+
+        var obj2 = {
+
+            name: "Alice"
+
+        };
+
+
+        var greetFunc = obj1.greet.bind(obj2);
+
+        console.log(greetFunc()); // "Hello, my name is Alice"
+
+    </script>
+
+    <p>bind obj2이므로 this.name obj2에 있는 name을 바인드합니다.</p>
+
+
+
+    <!-- 25. Trailing commas -->
+
+    <script>
+
+        var arr = [
+
+            "apple",
+
+            "banana",
+
+            "orange",
+
+        ];
+
+        console.log(arr); // ["apple", "banana", "orange"]
+
+    </script>
+
+    <p>25. Trailing commas: 배열과 객체 리터럴에서 마지막 요소 뒤에 쉼표를 추가할 수 있는 예제입니다.</p>
+
+
+<script>
+    // 배열 생성
+
+    var fruits = ["apple", "banana", "orange"];
+
+
+    // 배열 출력
+
+    console.log("배열 초기 상태:", fruits);
+
+
+    // 배열에 값 추가 (push)
+
+    fruits.push("grape");
+
+    console.log("push 후:", fruits); // ["apple", "banana", "orange", "grape"]
+
+
+    // 배열의 요소 변경
+
+    fruits[1] = "cherry";
+
+    console.log("요소 변경 후:", fruits); // ["apple", "cherry", "orange", "grape"]
+
+
+    // 배열의 요소 삭제 (splice)
+
+    console.log(fruits);
+
+    fruits.splice(2, 1); // 인덱스 2부터 1개의 요소 제거
+
+    
+
+    console.log("요소 삭제 후:", fruits); // ["apple", "cherry", "grape"]
+
+
+
+
+    console.log('=====================');
+
+
+    var array=[1,2,3,4,5];
+
+    
+
+    // 해당배열에대한 foreach 로 function 의 변수 item로 출력 
+
+    array.forEach(function(item) {
+
+        
+
+        console.log(item);
+
+    });
+
+</script>
+
+</body>
+</html>

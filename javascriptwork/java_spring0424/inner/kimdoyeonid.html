@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function idPrint(){
+            document.getElementById("name").innerHTML="<h1>홍길동</h1>";
+            document.getElementById("age").innerHTML="<h1>10</h1>";
+            document.getElementById("address").innerHTML="<h1>인천</h1>";
+        }
+    </script>
+</head>
+<body>
+    
+    <div id="name">
+        이름
+    </div>
+    <div id="age">
+        나이
+    </div>
+    <div id="address">
+        주소
+    </div>
+
+    <input type="button" value="id" onclick="idPrint()">
+
+</body>
+</html>

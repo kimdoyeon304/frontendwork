@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //get: 얻는다 set: 입력,수정,설정
+        function idPrint(){
+        document.getElementById("divid").innerHTML="<h1>홍길동</h1>";
+    }
+
+    </script>
+</head>
+<body>
+    <!-- 빈태그 -->
+    <div id="divid">
+        아무개
+    </div>
+
+    <div id="divid2">
+        아무개
+    </div>
+
+    <input type="button" value="idclick" onclick="idPrint()">
+</body>
+</html>

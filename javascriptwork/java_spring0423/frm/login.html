@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Login() {
+            var frm = document.loginfrm;
+
+            window.alert('로그인 준비중');
+            //alert()
+
+            window.alert(frm.userid.value);
+            window.alert(frm.passwd.value);
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- form안에 name있어야 다음페이지에 값이 넘어감 -->
+    <form name="loginfrm">
+        userid<input type="text" name="userid"><br>
+        passwd <input type="password" name="passwd">
+
+        <input type="button" value="login" onclick="Login()">
+
+    </form>
+</body>
+
+</html>

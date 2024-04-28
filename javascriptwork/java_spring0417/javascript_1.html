@@ -1,0 +1,76 @@
+<!-- javascript
+document:문서(모든문서의부모)
+window:창(모든창의부모) -->
+
+<!-- documenttype:문서타입 -->
+<!-- 문서타입의 html형식 선언 -->
+<!-- 웹으로 출력:html -->
+<!-- 상속이 제일 어렵다 -->
+
+<!-- 큰곳에서 작은곳으로 간다 객체지향프로그래밍 -->
+<!-- Object->해당하는곳(상속) -->
+<!-- spring,egov,servlet,jsp (m:model v:view c:controller) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- ctrl+h:전체검색,전체바꾸기
+ctrl+shift+r:파일검색 -->
+    <!-- head:javascript,css,meta,title 설정 링크 -->
+    <!-- 함수:method -->
+    <!-- 아귀먼트는 무한으로 올수있고 기본으로 올수있다() -->
+    <!-- ()있는것은 무조건 동사 움직인다 -->
+    <!-- 변수:하나의 값만 가진다 var name='아무개' -->
+    <!-- function 메소드이름(아귀먼트 인자) -->
+    <!-- javascript,vbjavascript,es6,typescript,babanascript,jquery,react,vue,node -->
+   
+   <script>
+        function Daum(){
+
+            //var:Object 모든타입을 다 가질수있다(포함하고있다)
+            //es6(2019 javascript)
+
+
+            //변수:모든 객체지향언어 오른쪽에서 왼쪽으로 값이 이동한다 저장한다
+            //form타입이름이 변수로 저장
+
+            var frm=document.daumfrm;
+            frm.action="daumnext2.html";
+
+            //url에 파라미터 값이 붙어서 넘어간다 255넘으면 짤린다
+            //frm.method="get";
+
+            //내부적으로 파라미터값이 넘어간다(url값이 안보인다)
+            //405에러 liveserver 지원안함
+            //tomcat(was) server
+            frm.method="post";
+
+            //모든파라미터이름을 다음페이지로 넘긴다
+            frm.submit();
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- form 안에 파라미터 이름이 있어야 다음 페이지로 값이 넘어간다 -->
+
+    <form name="daumfrm">
+        <!-- parameter name:userid -->
+        userid<input type="text" name="userid"><br>
+        <!-- parameter name:passwd -->
+        <!-- 별표로 출력 -->
+        passwd<input type="password" name="passwd"><br>
+        <!-- 이벤트처리 -->
+        <input type="button" value="login" onclick="Daum()">
+    </form>
+</body>
+
+</html>

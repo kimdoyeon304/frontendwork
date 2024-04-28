@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function CoupangInputlogin() {
+            var frm = document.coupang;
+
+            console.log('아이디(이메일):' + frm.userid.value);
+            console.log('비밀번호:' + frm.passwd.value);
+            console.log('비밀번호확인:' + frm.passwdcheck.value);
+            console.log('이름:' + frm.name.value);
+            console.log('휴대폰번호:' + frm.phone.value);
+
+            window.alert('아이디(이메일):' + frm.userid.value + '\n비밀번호:' + frm.passwd.value + '\n비밀번호확인:' + frm.passwdcheck.value + '\n이름:' + frm.name.value + '\n휴대폰번호:' + frm.phone.value);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form name="coupang">
+        아이디(이메일)<input type="text" name="userid" id=""><br>
+        비밀번호<input type="password" name="passwd" id=""><br>
+        비밀번호확인<input type="password" name="passwdcheck" id=""><br>
+        이름<input type="text" name="name" id=""><br>
+        휴대폰 번호<input type="text" name="phone" id=""><br>
+
+        <input type="button" value="가입하기" onclick="CoupangInputlogin()">
+    </form>
+</body>
+
+</html>

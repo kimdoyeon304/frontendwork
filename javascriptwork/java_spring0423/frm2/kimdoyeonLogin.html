@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function Login() {
+            var frm = document.loginfrm;
+
+            frm.action = "kimdoyeonLoginnext.html";
+            frm.method = "get";
+            frm.submit();
+        }
+    </script>
+</head>
+
+<body>
+    <form name="loginfrm">
+        userid <input type="text" name="userid" id=""><br>
+        passwd <input type="password" name="passwd" id=""><br>
+        email <input type="text" name="email" id=""><br>
+        phone <input type="text" name="phone" id=""><br>
+
+        <input type="button" value="login" onclick="Login()">
+
+    </form>
+</body>
+
+</html>

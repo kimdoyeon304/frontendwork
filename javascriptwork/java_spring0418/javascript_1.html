@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- javascript,css,meta, link, 설정 -->
+    <script>
+        // 함수:메소드(method)
+        // document(모든문서의부모)
+        // window(모든창의부모)
+        function Init(){
+            // '홀따옴표(싱글쿼터)'
+            // "쌍따옴표(더블쿼터)"
+            // 홀따옴표로 감싼것은 문자열이다
+
+            window.alert('it에 오신 것을 환영합니다.');
+        }
+        
+        function Init2(){
+            window.alert('이름 나이 주소');
+        }
+
+    </script>
+</head>
+<body>
+    <form action="">
+            <!-- ctrl+o:모든 이름 보기 -->
+            <!-- f3해당하는 함수 바로가기 / 이전 alt+좌 -->
+            <!-- ctrl+마우스왼쪽 클릭 함수 바로가기 -->
+        <input type="button" value="click" onclick="Init()"><br>
+
+        <input type="button" value="alert" onclick="Init2()">
+    </form>
+</body>
+</html>

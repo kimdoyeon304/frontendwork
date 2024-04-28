@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <!-- script선언(클라이언트언어)
+    node.js vue.js(node.js) react.js -->
+    
+    <script>
+
+        function CoupangLogin() {
+            var frm = document.coupanglogin;
+            frm.method = "get";
+            frm.action = "/java_spring0417/form/coupangnext.html";
+            frm.submit();
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- 파라미터:반드시 form안에 있어야 한다 -->
+    <form name="coupanglogin">
+        <table border="1" align="center" width="300" height="200">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" onclick="CoupangLogin()" value="로그인"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" onclick="CoupangLogin()" value="회원가입"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

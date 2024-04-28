@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function Address() {
+            var frm = document.add;
+
+            console.log('이름:' + frm.userid.value);
+            console.log('핸드폰:' + frm.phone.value);
+            console.log('이메일:' + frm.address.value);
+
+            window.alert('이름:' + frm.userid.value + '\n핸드폰:' + frm.phone.value + '\n이메일:' + frm.address.value);
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="add">
+        이름<input type="text" name="userid" id=""><br>
+        핸드폰<input type="text" name="phone" id=""><br>
+        이메일<input type="text" name="address" id=""><br>
+
+        <input type="button" value="Address" onclick="Address()">
+
+    </form>
+</body>
+
+</html>

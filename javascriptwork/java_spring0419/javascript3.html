@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var i = 10;
+        if (i % 2 == 0) {
+            console.log('짝수');
+        } else {
+            console.log('홀수');
+        }
+    </script>
+    <script>
+        // 1-10 짝수합 홀수합 총합 출력
+        var one = 0;
+        var two = 0;
+        var sum = 0;
+
+        for (var i = 1; i <= 10; i++) {
+            if (i % 2 == 0) {
+                two = two + i;
+            }
+            else {
+                one = one + i;
+            }
+        }
+        sum = one + two;
+        console.log('for문 1-10짝수합:' + two);
+        console.log('for문 1-10홀수합:' + one);
+        console.log('for문 1-10총합:' + sum);
+
+
+        one = 0;
+        two = 0;
+        sum = 0;
+        i = 1;
+        while (i <= 10) {
+
+            if (i % 2 == 0) {
+                two = two + i;
+            }
+            else {
+                one = one + i;
+            }
+            ++i;
+        }
+        sum = one + two;
+        console.log('while문 1-10짝수합:' + two);
+        console.log('while문 1-10홀수합:' + one);
+        console.log('while문 1-10총합:' + sum);
+
+        one = 0;
+        two = 0;
+        sum = 0;
+        i = 1;
+        do {
+            if (i % 2 == 0) {
+                two = two + i;
+            }
+            else {
+                one = one + i;
+            }
+
+        } while (++i <= 10);
+        sum = one + two;
+        console.log('do-while문 1-10짝수합:' + two);
+        console.log('do-while문 1-10홀수합:' + one);
+        console.log('do-while문 1-10총합:' + sum);
+    </script>
+
+    <script>
+        //3 7 9 뺀 짝수합 홀수합
+
+        two = 0;
+        one = 0;
+
+        for (i = 1; i <= 10; i++) {
+            if (!(i == 3 || i == 7 || i == 9)) {
+                if (i % 2 == 0) {
+                    two = two + i;
+                } else {
+                    one = one + i;
+                }
+            }
+        }
+        console.log('379뺀 짝수합' + two);
+        console.log('379뺀 홀수합' + one);
+        console.log('379뺀 총합' + (two + one));
+    </script>
+</body>
+
+</html>

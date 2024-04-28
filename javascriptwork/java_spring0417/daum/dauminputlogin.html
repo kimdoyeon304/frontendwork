@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        function DaumLogin(){
+            var frm=document.Daum;
+            frm.method="get";
+            frm.action="/java_spring0417/daum/dauminputloginnext.html";
+            frm.submit();
+        }
+
+    </script>
+</head>
+<body>
+
+    <form name="Daum">
+        <table align="center">
+            <tr>
+                <td>아이디</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>휴대폰 번호</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="button" value="동의하고 가입하기" onclick="DaumLogin()"></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
