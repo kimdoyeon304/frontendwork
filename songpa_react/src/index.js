@@ -42,11 +42,12 @@ import './index.css';
 
 // import App from './Homerouter';
 
-// import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals';
 
-//import App from './Songparouter';
+import App from './Songparouter';
 //import App from './Ex3';
-import App from './Study2';
+//import App from './Study2';
+//import App from './Ex4';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

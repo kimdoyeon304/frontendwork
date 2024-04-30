@@ -10,6 +10,7 @@ import Ex1 from "./Ex1";
 import Ex2 from "./Ex2";
 import Ex3 from "./Ex3";
 import Study2 from "./Study2";
+import Ex4 from "./Ex4";
 
 // import flexHomeindex from "./flexbox/Homeindex";
 
@@ -60,7 +61,8 @@ const routeComponents = [
   { path: "/Ex1", component: Ex1 },
   { path: "/Ex2", component: Ex2 },
   { path: "/Ex3", component: Ex3 },
-  { path: "/Study2", component: Study2 }
+  { path: "/Study2", component: Study2 },
+  { path: "/Ex4", component: Ex4 }
 
 
 //   { path: "/flexHomeindex", component: flexHomeindex },
